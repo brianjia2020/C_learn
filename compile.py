@@ -4,8 +4,9 @@ import shutil
 
 
 def run():
-    cwd = "/Users/chunyangjia/Desktop/Projects/C_learn/source_files"
-    outputFolder = "/Users/chunyangjia/Desktop/Projects/C_learn/output"
+    cwd = os.getcwd()
+    cwd = os.path.join(cwd, "source_files")
+    outputFolder = os.path.join(cwd, "output")
     toCompile = findAllItems(cwd)
     if os.path.isdir(outputFolder):
         shutil.rmtree(outputFolder)
@@ -32,7 +33,7 @@ def findAllItems(cwd):
         # print(item.split("."))
         # print(newItem)
         if os.path.isfile(newItem) and item.split(".")[-1] == "c":
-            print(item)
+            # print(item)
             toCompile.append(newItem)
         if os.path.isdir(newItem):
             toCompile.extend(findAllItems(newItem))
