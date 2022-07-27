@@ -5,9 +5,9 @@ import shutil
 
 def run():
     cwd = os.getcwd()
-    cwd = os.path.join(cwd, "source_files")
+    sourceFolder = os.path.join(cwd, "source_files")
     outputFolder = os.path.join(cwd, "output")
-    toCompile = findAllItems(cwd)
+    toCompile = findAllItems(sourceFolder)
     if os.path.isdir(outputFolder):
         shutil.rmtree(outputFolder)
         os.mkdir(outputFolder)
@@ -18,7 +18,7 @@ def run():
         target = item.replace("source_files", "output")
         target = target[:-2]
         path, file = os.path.split(target)
-        print(path, file)
+        # print(path, file)
         if not os.path.isdir(path):
             os.mkdir(path)
         subprocess.run(["clang", item, "-o", target])
