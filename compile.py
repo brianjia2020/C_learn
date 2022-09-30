@@ -21,7 +21,7 @@ def run():
         # print(path, file)
         if not os.path.isdir(path):
             os.mkdir(path)
-        subprocess.run(["clang", item, "-o", target])
+        subprocess.run(["clang", item, '-I', '/Users/brianjia/Desktop/PersonalProjects/C_learn/source_files/include/', "-o", target])
 
 
 def findAllItems(cwd):
