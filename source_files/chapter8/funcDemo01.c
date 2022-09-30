@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "include/myFunc.h"
 
 void main() {
     int a = 10;
