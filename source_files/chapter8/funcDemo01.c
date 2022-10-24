@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void main() {
+int main() {
     int a = 10;
     int b = 100;
     char op = '*';
@@ -8,4 +8,5 @@ void main() {
 
     printf("The answer is %d\n", (int) calculate(a, b, op));
     printf("The answer is %d\n", (int) calculate(a, b, '+'));
+    return 0;
 }
