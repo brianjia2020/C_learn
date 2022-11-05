@@ -11,5 +11,4 @@ void main(){
     printf("strcat(str1, str2) = %s\n", str1);// Hello World
     int len = strlen(str1);
     printf("len s1 = %d\n", len);
-
 }
